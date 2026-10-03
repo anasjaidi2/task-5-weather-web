@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search for the current temperature and coordinates of a country">
+    <title>SkyCast | Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="weather-shell">
+        <section class="intro-panel">
+            <div class="brand">
+                <span class="brand-icon">☀</span>
+                <span>SkyCast</span>
+            </div>
+
+            <div class="intro-copy">
+                <p class="eyebrow">LIVE WEATHER LOOKUP</p>
+                <h1>Weather around the world, in one search.</h1>
+                <p class="subtitle">Enter a country or city to view its current temperature and exact coordinates.</p>
+            </div>
+
+            <div class="sky-art" aria-hidden="true">
+                <span class="sun"></span>
+                <span class="cloud cloud-one"></span>
+                <span class="cloud cloud-two"></span>
+            </div>
+        </section>
+
+        <section class="search-panel">
+            <div class="panel-heading">
+                <p class="eyebrow">SEARCH LOCATION</p>
+                <h2>Where would you like to check?</h2>
+            </div>
+
+            <form id="weatherForm" class="search-form">
+                <label for="countryInput">Country or city</label>
+                <div class="input-group">
+                    <span class="search-icon" aria-hidden="true">⌕</span>
+                    <input id="countryInput" name="country" type="text" placeholder="For example: Egypt" autocomplete="off">
+                    <button id="searchButton" type="submit">Check weather</button>
+                </div>
+            </form>
+
+            <p id="errorMessage" class="message error-message" role="alert" hidden></p>
+
+            <div id="emptyState" class="empty-state">
+                <div class="empty-icon">🌤️</div>
+                <p>Your weather result will appear here.</p>
+            </div>
+
+            <article id="weatherResult" class="weather-result" hidden>
+                <div class="temperature-card">
+                    <div>
+                        <p class="result-label">CURRENT TEMPERATURE</p>
+                        <h3 id="placeName">—</h3>
+                        <p id="countryName" class="country-name">—</p>
+                    </div>
+                    <p class="temperature"><span id="temperatureValue">—</span><sup id="temperatureUnit">°C</sup></p>
+                </div>
+
+                <div class="coordinates">
+                    <div class="coordinate-card">
+                        <span class="coordinate-icon">↕</span>
+                        <div>
+                            <p>Latitude</p>
+                            <strong id="latitudeValue">—</strong>
+                        </div>
+                    </div>
+                    <div class="coordinate-card">
+                        <span class="coordinate-icon">↔</span>
+                        <div>
+                            <p>Longitude</p>
+                            <strong id="longitudeValue">—</strong>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

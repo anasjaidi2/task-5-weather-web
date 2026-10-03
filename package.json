@@ -1,0 +1,12 @@
+{
+  "name": "weather-dashboard-task",
+  "version": "1.0.0",
+  "description": "A simple country weather dashboard built with Node.js and Express",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
